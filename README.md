@@ -4,15 +4,16 @@
 - Example: `imm 35`
 - Loads an immediate value into reg0.
 - `<integer>` must be in the range 0–63.
-2. **mov** reg`<a>` reg`<b>`
+2. **mov reg**`<a>` **reg**`<b>`
 - Example: `mov reg0 reg1`
-- moves the value from reg`<a>` into reg`<b>` (range: from 0 to 6).
+- moves the value from reg`<a>` into reg`<b>` 
 - Can also be used to move a register value to the output (out).
+- **NOTE**: range of `a` and `b` is 0 to 6
 3. **cal** `<operation>`
 - Example: `cal add`
 - Performs an arithmetic or logic operation on reg1 and reg2.
 - Stores the result in reg3.
-Supported operations:
+- Supported operations:
     - `add` – addition
     - `sub` – subtraction
     - `and` – bitwise AND
