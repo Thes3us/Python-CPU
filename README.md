@@ -46,12 +46,12 @@
 - Performs an arithmetic or logic operation on reg1 and reg2.
 - Stores the result in reg3.
 Supported operations:
-- `add` – addition
-- `sub` – subtraction
-- `and` – bitwise AND
-- `nand` – bitwise NAND
-- `or` – bitwise OR
-- `nor` – bitwise NOR
+    - `add` – addition
+    - `sub` – subtraction
+    - `and` – bitwise AND
+    - `nand` – bitwise NAND
+    - `or` – bitwise OR
+    - `nor` – bitwise NOR
 4. **jmp** `<condition>`
 - Evaluates reg3 based on the specified condition.
 - If the condition is satisfied, the execution jumps to the instruction address stored in reg0.
