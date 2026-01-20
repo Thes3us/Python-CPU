@@ -1,4 +1,6 @@
-instruction_set = []
+#refer README for detailed instruction
+from assembler import assemble
+instruction_set = assemble(input("Enter the name of text file to assemble: "))
 class ALU:
     @staticmethod
     def bin_add(num1,num2):
@@ -66,7 +68,7 @@ def CU(num,operator):
     return result
 def main():
     reg = ['0']*8
-    debug_mode = int(input("Type 1 if you want to enable debug, 0 to only display output :"))
+    debug_mode = int(input("Type 1 if you want to enable debug, 0 to only display output (reg8):"))
     alu = ALU()
     i=0
     while(i<len(instruction_set)):
@@ -83,7 +85,7 @@ def main():
                 B = int(byte[5:],2)
                 reg[B] = reg[A]
                 if B == 7 and not debug_mode:
-                    print("output :",reg[B])
+                    print("output:",reg[B])
             case '10': #calculate
                 operator = byte[5:]
                 match operator:
@@ -133,7 +135,5 @@ def main():
         if int(reg[7]) >= 128:
             out = int(reg[7]) - 256
         if debug_mode:
-            print("register = ",end='')
-            [print(x,end=',') for x in reg[:6]]
-            print(out)
+            print("register:",reg)
 main()
