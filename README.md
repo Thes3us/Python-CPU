@@ -32,13 +32,16 @@ Supported operations:
     - `ltz` – reg3 < 0
     - `noz` – reg3 ≠ 0
     - `all` – always jump
+5. `;`
+- Example: `; this is a comment`
+- Any text after `;` is ignored.
 ## 2. Binary
 **FORMAT**: `00000000`
 1. **IMM**: `00 XXX XXX`
-- stores any value from 0 to 63 integers to reg 0
+- stores any value from 0 to 63 integers to reg 0.
 2. **MOV**: `01 XXX YYY`
-- moves value from reg0-reg6 (XXX) to reg0-reg6
-- can also move output value to register and vice verca
+- moves value from reg0-reg6 (XXX) to reg0-reg6.
+- can also move output value to register and vice verca.
     - 000 - reg0
     - 001 - reg1
     - 010 - reg2
@@ -57,7 +60,8 @@ Supported operations:
     - `100` - bitwise OR
     - `101` - bitwise NOR
 4. **JMP**: `11 000 XXX` 
-- Performs an arithmetic or logic operation on reg1 and reg2.
+- Evaluates reg3 based on the specified condition.
+- If the condition is satisfied, the execution jumps to the instruction address stored in reg0.
 - Supported conditions: 
     - `000` – never jump
     - `001` - reg3 > 0
