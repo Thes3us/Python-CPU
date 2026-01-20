@@ -6,9 +6,9 @@
 - `<integer>` must be in the range 0–63.
 2. **mov reg**`<a>` **reg**`<b>`
 - Example: `mov reg0 reg1`
-- moves the value from reg`<a>` into reg`<b>` 
-- Can also be used to move a register value to the output (out).
-- **NOTE**: range of a and b is 0 to 6
+- moves the value from reg`<a>` into reg`<b>`.
+- Can also be used to move a register value to the output (`out`).
+- **NOTE**: range of a and b is 0 to 6.
 3. **cal** `<operation>`
 - Example: `cal add`
 - Performs an arithmetic or logic operation on reg1 and reg2.
@@ -33,16 +33,16 @@ Supported operations:
     - `ltz` – reg3 < 0
     - `noz` – reg3 ≠ 0
     - `all` – always jump
-5. `;`
+5. **;** `<comment>`
 - Example: `; this is a comment`
 - Any text after `;` is ignored.
 ## 2. Binary
 **FORMAT**: `00000000`
 1. **IMM**: `00 XXX XXX`
-- stores any value from 0 to 63 integers to reg 0.
+- Stores any value from 0 to 63 integers to reg 0.
 2. **MOV**: `01 XXX YYY`
-- moves value from reg0-reg6 (XXX) to reg0-reg6.
-- can also move output value to register and vice verca.
+- Moves value from reg0-reg6 (XXX) to reg0-reg6.
+- Can also move output value to register and vice verca.
     - 000 - reg0
     - 001 - reg1
     - 010 - reg2
