@@ -8,7 +8,7 @@
 - Example: `mov reg0 reg1`
 - moves the value from reg`<a>` into reg`<b>` (range: from 0 to 6).
 - Can also be used to move a register value to the output (out).
-3. **cal** `<operation> `
+3. **cal** `<operation>`
 - Example: `cal add`
 - Performs an arithmetic or logic operation on reg1 and reg2.
 - Stores the result in reg3.
@@ -37,9 +37,9 @@ Supported operations:
 - Any text after `;` is ignored.
 ## 2. Binary
 **FORMAT**: `00000000`
-1. **IMM**: `00 XXX XXX`
+1. **Immediate**: `00 XXX XXX`
 - stores any value from 0 to 63 integers to reg 0.
-2. **MOV**: `01 XXX YYY`
+2. **Move**: `01 XXX YYY`
 - moves value from reg0-reg6 (XXX) to reg0-reg6.
 - can also move output value to register and vice verca.
     - 000 - reg0
@@ -50,7 +50,7 @@ Supported operations:
     - 101 - reg5
     - 110 - reg6
     - 111 - output 
-3. **CAL**: `10 000 XXX`
+3. **Calculate**: `10 000 XXX`
 - Performs an arithmetic or logic operation on reg1 and reg2.
 - Supported operations:
     - `000` - addition
@@ -59,7 +59,7 @@ Supported operations:
     - `011` - bitwise NAND
     - `100` - bitwise OR
     - `101` - bitwise NOR
-4. **JMP**: `11 000 XXX` 
+4. **Jump**: `11 000 XXX` 
 - Evaluates reg3 based on the specified condition.
 - If the condition is satisfied, the execution jumps to the instruction address stored in reg0.
 - Supported conditions: 
