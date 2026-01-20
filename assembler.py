@@ -19,8 +19,12 @@ def assemble(file_name):
         "all": "11000111",
     }
     instruction_set = []
-    with open(file_name) as f:
-        lines = f.readlines()
+    try:
+        with open(file_name) as f:
+            lines = f.readlines()
+    except:
+        print(f"Invalid file name '{file_name}', is the extension correct?")
+        exit()
     for line in lines:
         line = line.split(';')[0].strip()
         if not line or line.startswith(";"):
