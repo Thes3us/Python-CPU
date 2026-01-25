@@ -28,11 +28,12 @@ The CPU operates on an 8-bit instruction set.
 - reg1 & reg2: Input operands for ALU operations.
 - reg3: Stores the result of ALU operations.
 - reg0 - reg6: General purpose storage.
-- reg7 (out): Output register. When data is moved here, it is displayed to the console.
+- reg7 (out): Output register. When data is moved here, it is displayed to the console as a signed 8-bit integer.
 ## Additional info
-in `cpu.py` you may enable debug mode to see the states of all the registers in real time, or use the default mode to only see the output (register 7). You may write your own assembly as as `.txt` or `.asm` and save it in the same directory to use. There is also a demo program to print first 10 natural number in `print10num.asm` and a program to print the sum of first n natural number in `sum.asm`
+in `cpu.py` you may enable debug mode to see the states of all the registers in real time, or use the default mode to only see the output (register 7). You may write your own assembly as as `.txt` or `.asm` and save it in the same directory to use. There is also a demo program to print first 10 natural number in `10num.asm` and a program to print the sum of first n natural number in `sum.asm`
 ## License
 This project is licensed under the MIT License.
+
 
 
 
